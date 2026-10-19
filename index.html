@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 1. title: namnet som syns uppe i webbläsarfliken -->
+        <title>Sofia Svensson - Presentation</title>
+        <!-- Hämtar mina typsnitt från Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&amp;family=Nunito:wght@400;700&amp;display=swap" rel="stylesheet">
+        <!-- style: här bestämmer jag hur sidan ser ut, färger, typsnitt och så -->
+        <style>
+            body {
+                margin: 0;
+                padding: 24px 16px 48px;
+                font-family: "Nunito", Arial, sans-serif;
+                font-size: 18px;
+                line-height: 1.6;
+                color: #3a2a35;
+                background: linear-gradient(160deg, #ffe4ef 0%, #fff6e9 50%, #e6f4ea 100%);
+                background-attachment: fixed;
+            }
+            h1, h2, h3 {
+                font-family: "Fredoka", Arial, sans-serif;
+                line-height: 1.2;
+            }
+            h1 {
+                font-size: 2.6em;
+                text-align: center;
+                margin: 0.4em 0 0.2em;
+                color: #c2185b;
+            }
+            h2 {
+                color: #c2185b;
+                margin-top: 0;
+            }
+            h3 {
+                color: #6a8f3f;
+            }
+            .intro {
+                text-align: center;
+                font-size: 1.15em;
+                max-width: 620px;
+                margin: 0 auto 24px;
+            }
+            .profilbild {
+                display: block;
+                width: 300px;
+                max-width: 80%;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 50% / 40%;
+                border: 8px solid #ffffff;
+                box-shadow: 0 10px 30px rgba(194, 24, 91, 0.25);
+                transform: rotate(-3deg);
+                transition: transform 0.3s;
+            }
+            .profilbild:hover {
+                transform: rotate(3deg) scale(1.04);
+            }
+            .kort {
+                background: #ffffff;
+                max-width: 720px;
+                margin: 24px auto;
+                padding: 24px 28px;
+                border-radius: 24px;
+                box-shadow: 0 6px 20px rgba(58, 42, 53, 0.08);
+            }
+            strong {
+                color: #c2185b;
+            }
+            a {
+                color: #c2185b;
+                font-weight: 700;
+            }
+            a:hover {
+                background: #ffe4ef;
+            }
+            .knapp {
+                display: inline-block;
+                padding: 10px 22px;
+                border-radius: 999px;
+                background: #c2185b;
+                color: #ffffff;
+                text-decoration: none;
+            }
+            .knapp:hover {
+                background: #8e1043;
+            }
+            .intressen {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .intressen li {
+                background: #ffe4ef;
+                padding: 6px 16px;
+                border-radius: 999px;
+            }
+            /* This or that: mitt val blir en rosa bubbla */
+            .this-or-that {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0 10px;
+                text-align: center;
+            }
+            .this-or-that td {
+                width: 42%;
+                padding: 10px 8px;
+                border-radius: 16px;
+                color: #a08a96;
+            }
+            .this-or-that .eller {
+                width: 16%;
+                font-size: 0.85em;
+                font-style: italic;
+            }
+            .this-or-that .vald {
+                background: #c2185b;
+                color: #ffffff;
+                font-weight: 700;
+                box-shadow: 0 4px 12px rgba(194, 24, 91, 0.3);
+            }
+            /* Lite mindre luft på mobilen */
+            @media (max-width: 500px) {
+                body {
+                    font-size: 16px;
+                }
+                .kort {
+                    padding: 18px 16px;
+                }
+                .this-or-that td {
+                    font-size: 0.9em;
+                    padding: 8px 4px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 2. h1: sidans stora huvudrubrik, bara en per sida -->
+        <h1>Hej, jag heter Sofia! 🌸</h1>
+
+        <!-- 3. p: ett vanligt textstycke -->
+        <p class="intro">
+            Välkommen till min presentationssida! Här kan du läsa lite om vem jag är och vad jag gör.
+        </p>
+
+        <!-- 5. img: en bild på mig, alt-texten beskriver bilden om den inte syns -->
+        <img class="profilbild" src="bilder/sofia.jpg" alt="Sofia sitter på en stenmur och ler i solen, framför en gammal kyrka och en gräsmatta full av vita narcisser" width="300" height="400">
+
+        <!-- div: en låda runt innehållet, här blir den ett vitt kort -->
+        <div class="kort">
+            <!-- 2. h2: rubrik för en ny del av sidan -->
+            <h2>Om mig</h2>
+            <p>
+                Jag är 23 år, halvt filippinsk och halvt svensk, och flyttade till Sverige när jag var 12 år.
+                Just nu bor jag i Växjö, där jag läser programmet
+                <!-- 6. strong: gör texten fet för att visa att den är viktig -->
+                <strong>Civilingenjör i mjukvaruteknik</strong> vid Linnéuniversitetet (LNU).
+            </p>
+            <p>
+                Vid sidan av studierna jobbar jag deltid på en pub och är dessutom praktikant på ett startup-företag.
+                Trots det tyckte jag att kursen <strong>Webbdesign (D0015D)</strong> vid Luleå tekniska universitet
+                lät så intressant att jag sökte den ändå,
+                <!-- 7. em: betonar texten, blir kursiv -->
+                <em>man kan ju aldrig ha för mycket att göra!</em>
+            </p>
+        </div>
+
+        <div class="kort">
+            <h2>Det här gillar jag</h2>
+            <!-- 9. ul: en punktlista, varje punkt är ett li -->
+            <ul class="intressen">
+                <li>💄 Smink</li>
+                <li>👗 Mode</li>
+                <li>🏋️ Gymmet</li>
+                <li>🍳 Att laga mat och baka</li>
+                <li>🥂 Att umgås med vänner och min pojkvän</li>
+                <li>📚 Att läsa romance-böcker</li>
+                <li>🎶 Musik, alla sorter utom country!</li>
+                <li>🎬 Att titta på filmer och serier</li>
+                <li>✨ Att bara ha kul med livet</li>
+                <li>💗 Rosa, allt rosa (märks det på sidan?)</li>
+            </ul>
+        </div>
+
+        <div class="kort">
+            <h2>Snabba fakta</h2>
+            <!-- 2. h3: en mindre rubrik under h2 -->
+            <h3>This or that? 🤔</h3>
+            <p>Mitt val är markerat i rosa.</p>
+            <!-- 8. table, tr, td: en tabell, tr är en rad och td en ruta i raden -->
+            <table class="this-or-that">
+                <tr>
+                    <td class="vald">Te ✓</td>
+                    <td class="eller">eller</td>
+                    <td>Kaffe</td>
+                </tr>
+                <tr>
+                    <td>Sommar</td>
+                    <td class="eller">eller</td>
+                    <td class="vald">Vinter ✓</td>
+                </tr>
+                <tr>
+                    <td>Sött</td>
+                    <td class="eller">eller</td>
+                    <td class="vald">Salt ✓</td>
+                </tr>
+                <tr>
+                    <td>Morgonmänniska</td>
+                    <td class="eller">eller</td>
+                    <td class="vald">Nattuggla ✓</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="kort">
+            <h2>Min analys av H&amp;M 🛍️</h2>
+            <p>I uppgift 1a analyserade jag H&amp;M:s webbplats.</p>
+            <p>
+                <!-- 4. a: en länk, href är dit den leder -->
+                <a class="knapp" href="analys.html">Läs min analys av hm.com →</a>
+            </p>
+        </div>
+
+        <div class="kort">
+            <h2>Webbplatser som intresserar mig</h2>
+            <ul>
+                <li><a href="https://www.zalando.se/">Zalando</a>, för att hitta nya kläder och skor</li>
+                <li><a href="https://www.sellpy.se/">Sellpy</a>, för second hand, det är också bra att handla!</li>
+                <li><a href="https://www.kicks.se/">KICKS</a>, där jag handlar smink</li>
+                <li><a href="https://www2.hm.com/sv_se/index.html">H&amp;M</a>, mode och sajten jag analyserade</li>
+                <li><a href="https://www.youtube.com/">YouTube</a>, för att kolla på roliga video</li>
+            </ul>
+        </div>
+    </body>
+</html>

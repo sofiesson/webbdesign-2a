@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <!-- 1. title: namnet som syns uppe i webbläsarfliken -->
+        <title>Analys av hm.com - Sofia Svensson</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Samma typsnitt som på startsidan -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&amp;family=Nunito:wght@400;700&amp;display=swap" rel="stylesheet">
+        <!-- style: en enklare version av startsidans stil -->
+        <style>
+            body {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 24px 16px 48px;
+                font-family: "Nunito", Arial, sans-serif;
+                font-size: 17px;
+                line-height: 1.7;
+                color: #3a2a35;
+                background: #fff7fa;
+            }
+            h1, h2, h3 {
+                font-family: "Fredoka", Arial, sans-serif;
+                color: #c2185b;
+                line-height: 1.2;
+            }
+            h2 {
+                margin-top: 1.6em;
+            }
+            a {
+                color: #c2185b;
+                font-weight: 700;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            td {
+                padding: 8px 10px;
+                border-bottom: 2px solid #ffe4ef;
+            }
+            tr:first-child td {
+                background: #ffe4ef;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 4. a: en länk, den här tar dig tillbaka till startsidan -->
+        <a href="index.html">Tillbaka till startsidan</a>
+
+        <!-- 2. h1: sidans stora huvudrubrik -->
+        <h1>1a Analysera en webbplats</h1>
+
+        <!-- 3. p: ett vanligt textstycke -->
+        <p>
+            Jag valde
+            <!-- 6. strong: gör texten fet för att visa att den är viktig -->
+            <strong>H&amp;M (hm.com)</strong>, dels för att jag handlar där själv och dels för att det är ett av
+            Sveriges största företag. Jag tittade på den svenska versionen av sajten både på laptop och på mobilen.
+        </p>
+
+        <!-- 2. h2: rubrik för varje del av analysen -->
+        <h2>Syfte</h2>
+        <p>
+            Syftet är självklart att sälja kläder online och att få folk att börja använda appen och bli medlemmar.
+            Jag säger det på grund av hur startsidan är uppbyggd. Den består nästan bara av stora kampanjbilder med
+            knappar som "Handla nu", menyn är sorterad efter produktkategori i stället för efter information, och sök,
+            favoriter och varukorgen följer med på varenda sida. Jobb, hållbarhet och investerarinformation finns också,
+            men bara längst ner i sidfoten, vilket säger en del om vad H&amp;M prioriterar.
+        </p>
+
+        <h2>Målgrupp</h2>
+        <p>
+            Främst modeintresserade personer i ungefär 15 till 45 årsåldern som vill ha billiga och trendiga kläder.
+            Kategorierna (Dam, Herr, Barn, Baby, Home, Beauty) delar upp målgruppen, och modellerna och prisnivåerna
+            säger mycket. Designen är väldigt bildtung med lite text, vilket passar yngre användare som scrollar i
+            mobilen. Sidfoten visar att det finns sekundära målgrupper också, som arbetssökande, investerare och press,
+            men de får mycket lägre prioritet än kunden.
+        </p>
+
+        <h2>Navigation</h2>
+        <p>
+            H&amp;M använder en nät- eller hubstruktur snarare än en djup trädstruktur, så man når det mesta på ett
+            eller två klick. Det stämmer med det kursmaterialet säger om att undvika alltför djupa trädstrukturer.
+            Menyn och sidfoten ser likadana ut på alla sidor (WCAG 3.2), och brödsmulor plus den markerade kategorin i
+            menyn gör det lätt att se var man befinner sig (2.4). Megamenyn är dock en svaghet, eftersom den kastar
+            väldigt många länkar på en samtidigt, vilket är segt att ta sig igenom med tangentbordet.
+        </p>
+        <p>
+            Det som irriterade mig mest var filtren. När jag filtrerade, gick in på en produkt och tryckte tillbaka så
+            förlorade jag min plats, och Sundström skriver att man
+            <!-- 7. em: betonar texten, blir kursiv -->
+            <em>inte</em> ska ändra sidorna på återfärden.
+        </p>
+
+        <h2>Bilder</h2>
+        <p>
+            Bilderna gör det mesta av jobbet. Kampanjbilderna säljer en känsla mer än ett plagg, medan produktbilderna
+            med flera vinklar ersätter att kunna ta på kläderna i en butik. Problemet är att många bilder också är
+            länkar, och om en sådan bild har en dålig alt-text blir den värdelös med skärmläsare. Enligt WCAG 1.1 ska
+            alt-texten kunna ersätta bilden, medan rent dekorativa bilder ska ges tom alt-text så att skärmläsaren
+            hoppar över dem.
+        </p>
+
+        <h2>Tillgänglighet</h2>
+        <p>
+            H&amp;M har en egen tillgänglighetsredogörelse där de erkänner att sajten bara delvis uppfyller WCAG 2.1 AA.
+            De listar bristande alt-texter, inkonsekvent rubrikstruktur, otydliga landmarks, felaktiga etiketter, text
+            mindre än 16px och begränsat stöd för skärmläsare. De problemen träffar alla fyra WCAG-principerna samtidigt:
+        </p>
+
+        <!-- 2. h3: en mindre rubrik under h2 -->
+        <h3>Problemen kopplade till WCAG-principerna</h3>
+        <!-- 8. table, tr, td: en tabell, tr är en rad och td en ruta i raden -->
+        <table>
+            <tr>
+                <td><strong>Princip</strong></td>
+                <td><strong>Problem på hm.com</strong></td>
+            </tr>
+            <tr>
+                <td>Möjlig att uppfatta</td>
+                <td>Bristande alt-texter och för liten text</td>
+            </tr>
+            <tr>
+                <td>Hanterbar</td>
+                <td>Begränsat stöd för skärmläsare</td>
+            </tr>
+            <tr>
+                <td>Begriplig</td>
+                <td>Inkonsekvent rubrikstruktur</td>
+            </tr>
+            <tr>
+                <td>Robust</td>
+                <td>Felaktiga etiketter</td>
+            </tr>
+        </table>
+
+        <p>
+            För en blind person innebär det att rubrikerna inte går att använda som en karta över sidan, och en
+            bildlänk kan läsas upp som bara "länk". För någon med nedsatt syn är den lilla texten och den vita texten
+            ovanpå foton det värsta. Sedan tillgänglighetsdirektivet började gälla i juni 2025 och pekar på EN 301 549
+            är det här inte längre bara en användbarhetsfråga för e-handel, utan en juridisk fråga.
+        </p>
+
+        <h2>Responsivitet</h2>
+        <p>
+            Den fungerar bra i alla storlekar jag testade och menyn blir en hamburgare, rutnätet går från fyra kolumner
+            till två och bilderna skalar. Det är WCAG 1.3, struktur separerad från presentation. Jag zoomade också
+            texten till 200 procent och layouten höll ihop. Men responsiv är inte samma sak som tillgänglig. Sidan
+            flödar om snyggt och har ändå kvar alla problem ovan.
+        </p>
+
+        <h2>Förbättringar</h2>
+        <!-- 9. ul: en punktlista, varje punkt är ett li -->
+        <ul>
+            <li>Riktiga alt-texter</li>
+            <li>En fixad rubrikhierarki med korrekta landmarks</li>
+            <li>Större brödtext</li>
+            <li>Bättre kontrast på text ovanpå bilder</li>
+            <li>Undertexter på kampanjfilmerna</li>
+            <li>Filter som överlever bakåtknappen</li>
+        </ul>
+        <p>
+            Sammantaget är det en stark kommersiell sajt där tillgängligheten helt klart kom i andra hand.
+        </p>
+
+        <h2>Källa</h2>
+        <p>
+            Webbplatsen som analyserades:
+            <a href="https://www2.hm.com/sv_se/index.html">hm.com</a>
+        </p>
+    </body>
+</html>
